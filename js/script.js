@@ -1,6 +1,12 @@
-const menu = document.querySelector(`.nav__menu>img`);
-const navList = document.querySelector(`.nav__list`);
+const menu = document.querySelector(`.nav__menu`);
+const nav = document.querySelector(`.nav`);
 
 menu.addEventListener(`click`, () => {
-	navList.classList.toggle(`menu-active`);
+	nav.classList.toggle(`collapsible`);
+});
+
+window.addEventListener(`resize`, () => {
+	if (window.innerWidth >= 768) {
+		nav.classList.remove(`collapsible`);
+	}
 });
