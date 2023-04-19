@@ -13,6 +13,9 @@
 	--color-cyan-azure: hsl(218, 44%, 51%);
 	--color-nav-transparent: hsl(0, 0%, 100%, 0.6);
 	--color-nav-separators: hsl(0, 0%, 0%, 0.1);
+
+	--font-josefin: "Josefin Slab", serif;
+	--font-big-shoulders: "Big Shoulders Text", cursive;
 }
 
 *,
@@ -28,7 +31,7 @@ html {
 }
 
 body {
-	font-family: "Josefin Slab", serif;
+	font-family: var(--font-josefin);
 	font-size: 1.6rem;
 	font-weight: 500;
 	/* letter-spacing: 1px; */
@@ -39,7 +42,7 @@ body {
 h1,
 h2,
 h3 {
-	font-family: "Big Shoulders Text", cursive;
+	font-family: var(--font-big-shoulders);
 }
 
 h1 {
@@ -139,7 +142,7 @@ h1 {
 .portfolio__link {
 	text-decoration: none;
 	text-transform: uppercase;
-	font-family: "Big Shoulders Text", cursive;
+	font-family: var(--font-big-shoulders);
 	color: var(--color-black);
 }
 
@@ -265,4 +268,111 @@ h1 {
 	background-position: center top;
 }
 
-/* finish nav PORTFOLIO section and collapsible menu for desktop version */
+/*Container  */
+
+.container {
+	margin-inline: 20%;
+}
+
+/* Grid */
+
+.grid {
+	display: grid;
+	gap: 2rem;
+}
+
+.grid__link {
+	text-decoration: none;
+	color: var(--color-black);
+	display: block;
+	height: 300px;
+
+	background-size: cover;
+	position: relative;
+
+	transition: all 0.5s ease;
+}
+
+.grid__link:last-child {
+	background-position: center;
+}
+
+.grid__link::before {
+	content: "";
+	background-color: var(--color-nav-transparent);
+
+	opacity: 0;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.grid__link::after {
+	content: "";
+	background-color: var(--color-black);
+
+	opacity: 0;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0%;
+	height: 2px;
+
+	translate: -50% -50%;
+	transition: all 0.5s ease;
+}
+
+.grid__link:hover::before,
+.grid__link:hover::after,
+.grid__link:hover .grid-link__text {
+	opacity: 1;
+	z-index: 1;
+}
+
+.grid__link:hover::after {
+	width: 60%;
+}
+
+.grid__link:hover .grid-link__text:first-child {
+	top: 25%;
+}
+
+.grid__link:hover .grid-link__text:last-child {
+	bottom: 25%;
+}
+
+.grid-link__text {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.grid-link__text:first-child,
+.grid-link__text:last-child {
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+
+.grid-link__text:first-child {
+	font-family: var(--font-big-shoulders);
+	font-size: 5rem;
+	text-transform: uppercase;
+
+	top: 15%;
+}
+
+.grid-link__text:last-child {
+	font-family: var(--font-josefin);
+	font-size: 3rem;
+	text-transform: capitalize;
+	font-weight: 500;
+
+	bottom: 15%;
+}
+
+/* Dokonczyc grid w wersji desktopowej */
