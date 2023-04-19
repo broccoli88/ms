@@ -1,3 +1,5 @@
+// Nav
+
 const menu = document.querySelector(`.nav__menu`);
 const nav = document.querySelector(`.nav`);
 
@@ -10,3 +12,7 @@ window.addEventListener(`resize`, () => {
 		nav.classList.remove(`collapsible`);
 	}
 });
+
+// Sub-nav
+
+const subNav = document.querySelector(`.sub-list-portfolio`);
