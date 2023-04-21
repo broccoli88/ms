@@ -60,7 +60,7 @@ h1 {
 	padding: 1rem 2rem;
 	background-color: var(--color-nav-transparent);
 
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -279,6 +279,11 @@ h1 {
 	background-image: url("../images/hero.jpeg");
 	background-size: cover;
 	background-position: center top;
+	transition: opacity 0.4s ease;
+}
+
+.hero-fade {
+	opacity: 0.5;
 }
 
 /*Container  */
@@ -396,8 +401,16 @@ h1 {
 		width: 80%;
 		margin-inline: auto;
 		grid-template-columns: repeat(3, minmax(20%, 1fr));
-		/* grid-template-rows: repeat(7, minmax(200px, 500px)); */
 		grid-template-rows: repeat(7, 300px);
+
+		position: relative;
+		top: 0;
+
+		transition: top 0.4s ease;
+	}
+
+	.grid-slide {
+		top: -12rem;
 	}
 
 	.col-span-2 {
