@@ -470,6 +470,10 @@ h1 {
 		grid-template-columns: repeat(3, minmax(20%, 1fr));
 		grid-template-rows: repeat(6, minmax(200px, 450px));
 	}
+
+	.grid__link:hover:nth-child(4) .grid-link__text:last-child {
+		bottom: 25%;
+	}
 }
 
 /* Footer */
