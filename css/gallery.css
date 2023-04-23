@@ -52,6 +52,12 @@ h1 {
 	margin: 0;
 }
 
+.heading {
+	margin: 6rem 1rem;
+	font-size: 6rem;
+	font-weight: 700;
+}
+
 /* Nav */
 
 .nav {
@@ -234,7 +240,7 @@ h1 {
 
 	/* Portfolio sub-list */
 
-	.nav__list .nav__item:first-child {
+	.nav__list .nav__item[data-sub-list] {
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -259,7 +265,7 @@ h1 {
 		transition: max-height 0.4s ease, opacity 0.6s ease;
 	}
 
-	.nav__list .nav__item:first-child:hover .sub-list-portfolio {
+	.nav__list .nav__item[data-sub-list]:hover .sub-list-portfolio {
 		max-height: 100vh;
 		opacity: 1;
 	}
@@ -468,4 +474,18 @@ h1 {
 
 .slider-left {
 	left: 2rem;
+}
+
+/* Under Construction */
+
+#under-construction {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#under-construction__info {
+	font-size: 8rem;
+	text-align: center;
 }
