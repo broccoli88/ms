@@ -81,6 +81,12 @@ export function modalDisplay(
 		teleport.classList.remove(`show-teleport`);
 	});
 
+	teleport.addEventListener("click", (e) => {
+		if (e.target === teleport) {
+			teleport.classList.remove(`show-teleport`);
+		}
+	});
+
 	// Image slide
 
 	sliders.forEach((slider) => {
