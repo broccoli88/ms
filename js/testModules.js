@@ -43,12 +43,13 @@ export function createGallery(imageArray, tilesParentClass) {
 
 export function modalDisplay(
 	imageArray,
+	gridTilesClass,
 	modalClass,
 	closeBtnClass,
 	teleportImgClass,
 	slidersClass
 ) {
-	const galleryGrid = document.querySelectorAll(`.gallery-img`);
+	const galleryGrid = document.querySelectorAll(`.${gridTilesClass}`);
 	const teleport = document.querySelector(`.${modalClass}`);
 	const closeTeleport = document.querySelector(`.${closeBtnClass}`);
 	const teleportImage = document.querySelector(`.${teleportImgClass}`);
