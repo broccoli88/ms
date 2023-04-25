@@ -29,6 +29,19 @@ export function createGallery(imageArray, parentElClass) {
 	});
 }
 
+export function setGalleryLayout(imageContainerClass) {
+	const gallery = document.querySelectorAll(`.${imageContainerClass}`);
+
+	gallery.forEach((tile, index) => {
+		if (tile.naturalHeight > 1250) {
+			tile.classList.add(`row-span-2`);
+		}
+		if (tile.naturalWidth > 1250) {
+			tile.classList.add(`col-span-2`);
+		}
+	});
+}
+
 // Modal
 
 export function modalDisplay(

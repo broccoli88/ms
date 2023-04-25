@@ -183,6 +183,13 @@ const imagesSesjaBiznesowa = [
 
 if (pageTitle === "Banan NS") {
 	createGallery(imagesBanan, "grid-gallery");
+	modalDisplay(
+		imagesBanan,
+		"teleport",
+		"teleport__close",
+		"teleport__img",
+		"teleport__slider"
+	);
 }
 if (pageTitle === "Czek IT") {
 	createGallery(imagesCzekIT, "grid-gallery");
