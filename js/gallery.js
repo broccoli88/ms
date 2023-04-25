@@ -181,85 +181,88 @@ const imagesSesjaBiznesowa = [
 	"../images/sesja-biznesowa/10.jpg",
 ];
 
-window.addEventListener(`load`, () => {
-	if (pageTitle === "Banan NS") {
-		createGallery(imagesBanan, "grid-gallery");
-		modalDisplay(
-			imagesBanan,
-			"teleport",
-			"teleport__close",
-			"teleport__img",
-			"teleport__slider"
-		);
-	}
-	if (pageTitle === "Czek IT") {
-		createGallery(imagesCzekIT, "grid-gallery");
-		modalDisplay(
-			imagesCzekIT,
-			"teleport",
-			"teleport__close",
-			"teleport__img",
-			"teleport__slider"
-		);
-	}
-	if (pageTitle === "Dentify") {
-		createGallery(imagesDentify, "grid-gallery");
-		modalDisplay(
-			imagesDentify,
-			"teleport",
-			"teleport__close",
-			"teleport__img",
-			"teleport__slider"
-		);
-	}
-	if (pageTitle === "Falk") {
-		createGallery(imagesFalk, "grid-gallery");
-		modalDisplay(
-			imagesFalk,
-			"teleport",
-			"teleport__close",
-			"teleport__img",
-			"teleport__slider"
-		);
-	}
-	if (pageTitle === "KIA Korczyk") {
-		createGallery(imagesKiaKorczyk, "grid-gallery");
-		modalDisplay(
-			imagesKiaKorczyk,
-			"teleport",
-			"teleport__close",
-			"teleport__img",
-			"teleport__slider"
-		);
-	}
-	if (pageTitle === "Mercedes Benz Sobieslaw Zasada") {
-		createGallery(imagesMercedesZasada, "grid-gallery");
-		modalDisplay(
-			imagesMercedesZasada,
-			"teleport",
-			"teleport__close",
-			"teleport__img",
-			"teleport__slider"
-		);
-	}
-	if (pageTitle === "My Clicnic") {
-		createGallery(imagesMyClinic, "grid-gallery");
-		modalDisplay(
-			imagesMyClinic,
-			"teleport",
-			"teleport__close",
-			"teleport__img",
-			"teleport__slider"
-		);
-	}
-	if (pageTitle === "Sesja Biznesowa") {
-		createGallery(imagesSesjaBiznesowa, "grid-gallery");
-		modalDisplay(
-			imagesSesjaBiznesowa,
-			"teleport",
-			"teleport__close",
-			"teleport__img",
-			"teleport__slider"
-		);
-	}
+if (pageTitle === "Banan NS") {
+	createGallery(imagesBanan, "grid-gallery");
+}
+if (pageTitle === "Czek IT") {
+	createGallery(imagesCzekIT, "grid-gallery");
+	modalDisplay(
+		imagesCzekIT,
+		"teleport",
+		"teleport__close",
+		"teleport__img",
+		"teleport__slider"
+	);
+}
+if (pageTitle === "Dentify") {
+	createGallery(imagesDentify, "grid-gallery");
+	modalDisplay(
+		imagesDentify,
+		"teleport",
+		"teleport__close",
+		"teleport__img",
+		"teleport__slider"
+	);
+}
+if (pageTitle === "Falk") {
+	createGallery(imagesFalk, "grid-gallery");
+	modalDisplay(
+		imagesFalk,
+		"teleport",
+		"teleport__close",
+		"teleport__img",
+		"teleport__slider"
+	);
+}
+if (pageTitle === "KIA Korczyk") {
+	createGallery(imagesKiaKorczyk, "grid-gallery");
+	modalDisplay(
+		imagesKiaKorczyk,
+		"teleport",
+		"teleport__close",
+		"teleport__img",
+		"teleport__slider"
+	);
+}
+if (pageTitle === "Mercedes Benz Sobieslaw Zasada") {
+	createGallery(imagesMercedesZasada, "grid-gallery");
+	modalDisplay(
+		imagesMercedesZasada,
+		"teleport",
+		"teleport__close",
+		"teleport__img",
+		"teleport__slider"
+	);
+}
+if (pageTitle === "My Clicnic") {
+	createGallery(imagesMyClinic, "grid-gallery");
+	modalDisplay(
+		imagesMyClinic,
+		"teleport",
+		"teleport__close",
+		"teleport__img",
+		"teleport__slider"
+	);
+}
+if (pageTitle === "Sesja Biznesowa") {
+	createGallery(imagesSesjaBiznesowa, "grid-gallery");
+	modalDisplay(
+		imagesSesjaBiznesowa,
+		"teleport",
+		"teleport__close",
+		"teleport__img",
+		"teleport__slider"
+	);
+}
+
+window.addEventListener("load", () => {
+	const images = document.querySelectorAll(".gallery-img");
+	images.forEach((image) => {
+		if (image.naturalHeight >= 1250) {
+			image.classList.add("row-span-2");
+		}
+		if (image.naturalWidth >= 1250) {
+			image.classList.add("col-span-2");
+		}
+	});
 });

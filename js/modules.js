@@ -17,25 +17,15 @@ export default function navUnwrap() {
 
 // Create gallery function
 
-export function createGallery(imageArray, tilesParentClass) {
-	const gallery = document.querySelector(`.${tilesParentClass}`);
+export function createGallery(imageArray, parentElClass) {
+	const gallery = document.querySelector(`.${parentElClass}`);
 
 	imageArray.forEach((image) => {
-		const img = document.createElement(`img`);
+		const img = document.createElement("img");
 		img.classList.add("gallery-img");
-		gallery.appendChild(img);
-	});
+		img.src = image;
 
-	const galleryGrid = document.querySelectorAll(`.gallery-img`);
-
-	galleryGrid.forEach((tile, index) => {
-		tile.src = imageArray[index];
-		if (tile.naturalHeight > 1250) {
-			tile.classList.add(`row-span-2`);
-		}
-		if (tile.naturalWidth > 1250) {
-			tile.classList.add(`col-span-2`);
-		}
+		gallery.append(img);
 	});
 }
 
